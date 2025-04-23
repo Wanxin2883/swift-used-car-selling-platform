@@ -1,0 +1,121 @@
+  .summary{
+    position: absolute;
+    top: 0;
+    right: 8%;
+  }
+  
+  .summary h1 {
+    position: relative;
+    margin-top: 8rem;
+    text-align: center; 
+    font-size: 4rem;
+  }
+  
+  .summary hr {
+    width: 19rem;
+    height: 10px;
+    align-items: center;
+    margin: auto;
+    background-color: #FF4C4C;
+    border: none;
+  }
+  
+  .summary #axia-pic{
+    width: 400px;
+  }
+  
+  .summary #pic {
+    align-items: center;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .appointment{
+    position: relative;
+    padding-top: 120px;
+    padding-left: 130px;
+  }
+  
+  .appointment form {
+    padding: 5px 30px 20px;
+    width: 750px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .appointment h3{
+    font-size: 2rem;
+    padding-bottom: 5px;
+  }
+  
+  .appointment form .inputBox {
+    margin: 18px 0;
+  }
+  
+  .appointment form .inputBox span{
+    padding-bottom: 5px;
+    display: block;
+  }
+
+  .appointment form .inputBox input {
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .appointment form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: black;
+    color: white;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .appointment form .submit-btn:hover {
+    background-color: #FF4C4C;
+    color: black;
+  }
+
+  @media(max-width: 1350px){
+    .summary{
+      right: 1rem;
+    }
+    .appointment{
+      padding-left: 2rem;
+    }
+    .appointment form{
+      width: 700px;
+    }
+  }
+
+  @media(max-width: 1100px){
+    .summary{
+      right: auto;
+      position: initial;
+      margin: auto;
+      margin-top: -82rem;
+      align-items: center;
+    }
+    .appointment{
+      padding: 0;
+      padding-top: 43rem;
+    }
+    .appointment h3{
+      text-align: center;
+    }
+    .appointment form{
+      width: 600px;
+      margin: auto;
+      box-shadow: none;
+    }
+  }
+
+  @media(max-width: 600px){
+    .appointment form{
+      width: 500px;
+    }
+  }

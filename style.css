@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth; 
+    text-decoration: none; 
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Hide the Scroll bar*/
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/*Beginning of Home Page Formating*/
+
+/*Formatting for Navigation bar in general*/
+header{
+    position: fixed; 
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 5px 50px;
+    z-index: 10000000000;
+    padding: 11px 40px;
+}
+
+/*Formatting the logo*/
+.logo img{
+    height: 50px;
+}
+
+/*Formatting main navigation bar in the center*/
+.navbar{
+    display: flex;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar a{
+    font-size: 1rem; 
+    padding: 0 25px; 
+    color: white; 
+    font-weight: 500; 
+}
+
+/*Orange Line under each section*/
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #FF4C4C;
+    position: absolute;
+    z-index: 101;
+    bottom: -4px;
+    left: 0;
+    transition:0.5s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+/*This icon will display only when the screen size smaller*/
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 101;
+    display: none;
+}
+
+/*Formatting for contact and language button*/
+.navbar-btn a, #search-icon{
+    padding: 0 15px;
+    color: white; 
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.search-box{
+    position: absolute;
+    top: 110%;
+    right: 3rem;
+    left: 3rem;
+    background-color: white;
+    border: 2px solid black;
+    clip-path: circle(0% at 100% 0%);
+}
+
+.search-box.active{
+    clip-path: circle(144% at 100% 0%);
+    transition: 0.4s;
+}
+
+.search-box input{
+    width: 100% ;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 1rem;
+}
+
+/*Formatting for the drop down menu*/
+.navbar .submenu{
+    display: none;
+}
+
+.navbar li:hover .submenu{
+    display: block; 
+    background: black; 
+    position: absolute;  
+    list-style-type: none;
+    z-index: 99;
+}
+
+.navbar li:hover .submenu li{
+    width: 150px; 
+    margin: 10px;
+    padding: 18px 5px 5px 0; 
+    border-bottom: 1px dotted white; 
+    text-align: left; 
+}
+
+.navbar li:hover .submenu li a:hover{
+    color: #FF4C4C;
+}
+
+.navbar li:hover .submenu li a::after{
+    display: none;
+}
+
+/*Formatting for content including text, background video, and shop button*/
+.content1 {
+    min-height: 600px;
+    display: flex;
+    align-items:center;
+}
+
+.content1 #content1-text{
+    margin: 150px 0 0 100px;
+}
+
+.content1 #content1-text h1{
+    color: white; 
+    font-size: 4rem;
+}
+
+.content1 #content1-text span{
+    color: #FF4C4C;
+}
+
+.content1 #shop-btn{
+    position: absolute;
+    padding: 10px 35px; 
+    column-gap: 0.5rem;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.content1 #shop-btn:hover{
+    background: #FF4C4C;
+    color: black;
+    transition: 0.4s;
+    column-gap: 2rem;
+}
+
+#top-icon{
+    color: #FF4C4C;
+    background-color: transparent;
+    font-size: 100px;
+    position:fixed;
+    right: 20px;
+    top: 500px;
+    z-index: 100;
+}
+
+.content1 #back-video{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+/*Formatting for content including brief introduction about our company*/
+.content2 table{
+    margin: auto;
+    margin-top: 150px;
+}
+
+.content2 table td{
+    text-align: center;
+}
+
+.content2 table td h1{
+    font-size: 4rem;
+}
+
+.content2 table td hr{
+    height: 10px;
+    background-color: #FF4C4C;
+    border: none;
+    width: 315px;
+    margin-left: 130px;
+}
+
+.content2 table .content2_img{
+    width: 550px;
+    max-width: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.content2 table .content2_img img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.imganimate{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+ /*Formatting for customer reviews*/
+  .reviews-container {
+    margin: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+  }
+  
+  #reviews #title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    color: #FF4C4C;
+  }
+  
+  #reviews hr {
+    background-color: black;
+    position: absolute;
+    border: none;
+    width: 450px;
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .rev-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+    margin-top: 10px;
+  }
+  
+  .reviews-container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reviews-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+  }
+  
+  .reviews-container .box p {
+    font-style: italic;
+  }
+  
+  .reviews-container .box .stars {
+    color: #FF4C4C;
+    margin-bottom: 15px;
+  }
+
+  /*Formatting for Common Faqs*/
+
+.faqs-container {
+    background-color: black;
+    max-width: 100%;
+  }
+  
+  .faqs-container .questions-container {
+    box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  .faq{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  
+  .faq h1 {
+    padding: 20px 0 0;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+  }
+
+  .faq hr {
+    background-color: #FF4C4C;
+    border: none;
+    width: 400px;
+    height: 10px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .faqs-container .faq-header {
+    display: flex;
+    background: black;
+    color: white;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .faqs-container .faq-header .open,
+  .faqs-container .faq-header .close {
+    position: absolute;
+    right: 0;
+    padding: 0 32px;
+    font-weight: bold;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: all 500ms;
+  }
+  
+  .faqs-container .faq-header .open.active,
+  .faqs-container .faq-header .close.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .faqs-container .faq-header p {
+    font-size: 1.2rem;
+    padding: 10px 32px;
+  }
+  
+  .faqs-container .content {
+    padding: 0 32px;
+    background: white;
+    line-height: 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+  }
+  
+  .faqs-container .content.active {
+    max-height: 600px;
+  }
+
+/*Formating for the footer and contact section*/
+
+ footer {
+    padding-left: 50px;
+    background-image: url(img/footerBackground.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+  }
+
+  footer h2{
+    font-size: 2.2rem;
+    padding-top: 25px;
+  }
+
+  footer h3 {
+    margin-left: 40px;
+    color: #FF4C4C;
+  }
+
+  footer #socials{
+    padding-left: 70px;
+  }
+  
+  footer a {
+    font-size: 30px;
+    text-decoration: none;
+    color: grey;
+    letter-spacing: 20px;
+  }
+  
+  footer a:hover {
+    color: #ff4c4c;
+  }
+  
+  footer p {
+    text-align: left;
+    padding-left: 70px;
+  }
+
+/*End of Home Page Formatting*/
+
+@media(max-width: 1100px){
+    .content1 #top-icon{
+        top: 450px;
+    }
+
+    .content2 table{
+        margin: auto;
+        margin-top: 60px;
+    }
+    .content2 table td h1{
+        font-size: 3.5rem;
+    }
+    .content2 table td hr{
+        width: 250px;
+        margin-left: 100px;
+    }
+    
+    .content2 table .content2_img{
+        width: 400px;
+    }
+}
+
+@media(max-width:890px){
+    .content1 #content1-text{
+        margin: 20px 0 0 80px;
+    }
+    .content1 #content1-text h1, .content2 table td h1, #reviews #title, .faqs-container h1{
+        font-size: 3rem;
+    }
+
+    #top-icon{
+        font-size: 80px;
+        top: 350px;
+    }
+
+    .content2 table{
+        margin: auto;
+    }
+
+    .content2 table td hr{
+        width: 220px;
+        margin-left: 75px;
+    }
+
+    .content2 table td p{
+        font-size: 0.8rem;
+    }
+
+    .content2 table .content2_img{
+        width: 350px;
+    }
+
+    #reviews hr {
+        width: 380px;
+    }
+    
+    .faq hr{
+        width: 300px;
+    }
+}
+
+@media(max-width:835px){
+    header{
+        padding: 11px 40px;
+    }
+
+    #menu-icon{
+        display: initial;
+        color: white;
+    }
+    
+    header .navbar{
+        position:absolute;
+        top:-500px;
+        left:0;
+        right:0;
+        display:flex;
+        flex-direction: column;
+        background:black;
+        transition: 0.3s ease;
+        text-align: left;
+    }
+
+    .navbar.active{
+        top:100%;
+    }
+
+    .navbar a{
+        padding: 1rem;
+        margin: 1rem;
+        border-left:2px solid #FF4C4C;
+        background-color: #262626;
+        display: block;
+    }
+
+    .navbar a:hover{
+        color: black;
+        background: #FF4C4C;
+    }
+
+    .navbar a::after{
+        display:none;
+    }
+
+    .navbar li:hover .submenu{
+        display: none;
+    }
+
+    .content1 #back-video{
+        top: 50px;
+    }
+    
+    .content2 table{
+        margin-top: -100px;
+    }
+}
+
+@media(max-width: 700px){
+    .content1 #content1-text{
+        margin: -200px 0 0 50px;
+    }
+    
+    .content1 #content1-text h1, #reviews #title, .faqs-container h1{
+        font-size: 2.5rem;
+    }
+
+    #top-icon{
+        font-size: 70px;
+        top: 300px;
+    }
+
+    .content2 table td h1{
+        font-size: 2.1rem;
+    }
+
+    .content2 table{
+        margin-top: -140px;
+    }
+
+    .content2 table td hr{
+        width: 160px;
+        height: 8px;
+        margin-left: 40px;
+    }
+
+    .content2 table td p{
+        font-size: 0.6rem;
+    }
+
+    .content2 table .content2_img{
+        width: 250px;
+    }
+
+    #reviews hr {
+        width: 300px;
+        height: 8px;
+    }
+    .faq hr{
+        width: 250px;
+        height: 8px;
+    }
+    footer #copyright{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 600px){
+    #top-icon{
+        top: 250px;
+    }
+
+    .content2 table{
+        margin-top: -210px;
+    }
+}

@@ -1,0 +1,449 @@
+*{
+    background-color: black;
+}
+
+.carheader{
+    display: flex;
+}
+
+.carheader h1{
+    padding-top: 8rem;
+    color: white;
+    font-size: 4rem;
+    margin-left: 6rem;
+}
+
+.carheader hr{
+    margin: 14rem 0 0 -18rem;
+    height: 10px;
+    width: 15.4rem; 
+    background-color: #FF4C4C;
+    border: none;
+}
+
+.filter-box{
+    position: absolute;
+    top: 9rem;
+    right: 5rem;
+    padding: 20px;
+    border: 3px solid white;
+}
+
+.carheader #filter-icon{
+    position: relative;
+    color: white; 
+    padding-left: 15px;
+    font-size: 2.5rem;
+}
+
+.carheader #filter{
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 15px 0 10px;
+    padding-right: 10px;
+    border: black;
+}
+
+.carlogo{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+.carlogo img{
+    height: 5.5rem;
+}
+
+.carlogo h2{
+    color: white;
+    font-size: 3.3rem;
+    padding: 3px 0 3px 15px;
+}
+
+.slide{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.box{
+    background-color: white;
+    flex: 1 1 17rem; 
+    position: relative; 
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 8px 8px 1px darkgray;
+    max-width: 23rem;
+    margin-top: 1rem;
+}
+
+.box img{
+    background-color: white;
+    width: 20rem;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.box img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+.box h3{
+    background-color: white;
+    padding-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600; 
+}
+
+.box span{
+    background-color: white;
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    color: #FF4C4C;
+    padding-bottom: 10px;
+}
+
+.heart{
+    background-color: white;
+    width: 6.58em; 
+    height: 3.25em; 
+    position: relative; 
+}
+
+.heart button{
+    background-color: white;
+    outline: none; 
+    border: none; 
+    color: white;
+    letter-spacing: 1px;
+}
+
+.heart button::before, .heart button::after{
+    content: ''; 
+    position: absolute;
+    top: 0;
+    width: 50%; 
+    height: 100%; 
+    background: black; 
+    z-index: 0; 
+    transition: 0.2s; 
+}
+
+.heart button::before{
+    left: 0;
+    border-radius: 2em 0 0 2em; 
+}
+
+.heart button::after{
+    right: 0;
+    position: absolute; 
+    left: 3.3rem;
+    border-radius: 0 2em 2em 0;  
+}
+
+/*Positioning the text & checkbox*/
+
+.heart i{
+    font-style: normal;
+    position: relative;
+    left: 2.3rem;
+    top: 0.3rem;
+    z-index: 1; 
+    font-size: 1rem;
+}
+
+input[type = "checkbox"] {
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+    top: 0; 
+    left: 0;
+    cursor: pointer; 
+    opacity: 0;
+    z-index: 2;
+}
+
+/*Rotate the halves and hide the text*/
+input[type = "checkbox"]:checked + button::before {
+    transform: rotate(45deg) translate(1em, -1.05em); 
+    animation: glow 0.3s ease-in 0.4s forwards; 
+}
+
+input[type = "checkbox"]:checked + button::after{
+    transform: rotate(-45deg) translate(-1em, -1.05em); 
+    animation: glow 0.3s ease-in 0.4s forwards;
+}
+
+input[type = "checkbox"]:checked + button i{
+    opacity: 0; 
+}
+
+@keyframes glow{
+    100%{
+        background: rgb(226, 48, 48);
+    }
+}
+
+.box .details{
+    background-color: white;
+    display: flex; 
+    align-items: center; 
+    position: absolute; 
+    bottom: 1.8rem;
+    right: 1.8rem; 
+    font-size: 1rem;
+    color: black;
+}
+
+.box .details:hover{
+    color: #FF4C4C;
+    text-decoration: underline;
+}
+
+.numbertext {
+    color: white;
+    background-color: transparent;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+}
+
+#close-form{
+    color: rgba(255, 255, 255, 0.9); 
+    font-size: 3rem;
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    padding: 2rem 3rem;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+.mySlides{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mySlides img{
+    width: 700px;
+    margin-left: 28%;
+    margin-top: 5rem;
+}
+
+.interior{
+    position: fixed; 
+    left: 0;
+    top: -105%;
+    z-index: 10000;
+}
+
+.interior.active{
+    top: 10%; 
+    opacity: 1;    
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.prev, .next, .prev1, .next1, .prev2, .next2, .prev3, .next3, .prev4, .next4, .prev5, .next5{
+    cursor: pointer;
+    position: absolute;
+    top: 34rem;
+    padding: 16px;
+    color: white;
+    background-color: transparent;
+    font-weight: 900;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev, .next{
+    font-size: 60px;
+    left: 18rem;
+    top: 17rem;
+}
+
+.next{
+    left: 73rem;
+}
+
+.prev2, .next2{
+    top: 72rem;
+}
+
+.prev3, .next3{
+    top: 110rem;
+}
+
+.prev4, .next4{
+    top: 148rem;
+}
+
+.prev5, .next5{
+    top: 186rem;
+}
+
+.next1, .next2, .next3, .next4, .next5{
+    right: 0;
+}
+
+.prev1:hover, .next1:hover, 
+.prev2:hover, .next2:hover, 
+.prev3:hover, .next3:hover, 
+.prev4:hover, .next4:hover,
+.prev5:hover, .next5:hover{
+    color: black;
+    background-color: white;
+}
+
+.dott{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: rgb(80, 80, 80);
+  }
+
+.fade{
+    animation: slideIn 1.5s backwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(800px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media(max-width: 1151px){
+    .mySlides img{
+        width: 600px;
+        margin-left: 20rem;
+    }
+    .prev{
+        left: 10rem;
+    }
+    .next{
+        left: 60rem;
+    }
+    .prev1, .next1{
+        top: 50rem;
+    }
+    .prev2, .next2{
+        top: 110rem;
+    } 
+    .prev3, .next3{
+        top: 176rem;
+    }
+    .prev4, .next4{
+        top: 240rem;
+    }
+    .prev5, .next5{
+        top: 305rem;
+    }
+}
+
+@media(max-width: 1100px){
+
+    .mySlides img{
+        width: 500px;
+        margin-left: 13rem;
+    }
+    .prev{
+        top: 15rem;
+        left: 8rem;
+    }
+    .next{
+        top: 15rem;
+        left: 45rem;
+    }
+
+    .carheader{
+        display: initial;
+    }
+
+    .carheader h1{
+        margin: auto;
+        top: 6rem;
+        text-align: center;
+    }
+
+    .carheader hr{
+        margin: auto;
+        left: 0.5rem;
+        width: 15rem;
+    }
+    
+    .filter-box {
+        position: relative;
+        top: 2rem;
+        left: 37%;
+        width: 330px;
+    }
+}
+
+@media(max-width: 759px){
+    .mySlides img{
+        width: 350px;
+        margin-top: 130px;
+        margin-left: 6rem;
+    }
+    .prev{
+        font-weight: normal;
+        top: 13rem;
+        left: 3rem;
+    }
+    .next{
+        font-weight: normal;
+        top: 13rem;
+        left: 27rem;
+    }
+
+    .prev1, .next1{
+        top: 68rem;
+    }
+    .prev2, .next2{
+        top: 155rem;
+    } 
+    .prev3, .next3{
+        top: 244rem;
+    }
+    .prev4, .next4{
+        top: 333rem;
+    }
+    .prev5, .next5{
+        top: 425rem;
+    }
+
+    .filter-box {
+        left: 26%;
+    }
+}
+
+footer p, footer h1, footer h3, footer #socials, footer #copyright {
+    background-color: transparent !important;
+}

@@ -1,0 +1,303 @@
+
+/*Beginning of car details page Formatting*/
+
+.carDetails{
+    position: relative;
+    padding-top: 8rem;
+}
+
+.carDetails h1{
+    font-size: 4rem;
+    margin-left: 12rem;
+}
+
+.carDetails hr{
+    background-color: #FF4C4C;
+    border: none;
+    width: 20rem;
+    height: 10px;
+    position:relative;
+    left: 15rem;
+}
+
+.carDetails p{
+    font-size: 25px;
+    position: relative;
+    margin-left: 15rem;
+}
+
+.carDetails #axia{
+    padding: 1.5rem 0 1.5rem;
+    margin-left: 11rem;
+    width: 500px;
+}
+
+.carDetails #book{ 
+    padding: 10px 55px 10px 55px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    background-color: black;
+}
+
+.carDetails #book:hover{
+    color: black;
+    background-color: #FF4C4C;
+}
+
+.carDetails #heart{
+    background-color: transparent;
+    color: transparent;
+    border: none; 
+    font-size: 30px;
+    padding-left: 90px;
+    -webkit-text-stroke: 2px #FF4C4C;
+}
+
+.carDetails #heart:hover{
+    cursor: pointer;
+}
+
+.carDetails h2{
+    text-align: center;
+    background-color: black; 
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 2rem;
+}
+
+.carDetails #table1{
+    position: absolute; 
+    left: 45rem;
+    top: 9rem;
+    text-align: left;
+}
+
+.carDetails table td a{
+    color: #FF4C4C;
+    text-decoration: underline;
+    font-size: smaller;
+    padding-left: 50px;
+}
+
+.carDetails table th{
+    padding-top: 13px;
+    font-size: 1.5rem;
+}
+
+.carDetails table td{
+    padding: 13px 0 0 35px;
+    font-size: 1.3rem;
+}
+
+.carDetails #table2{
+    margin: 3rem 0 5rem 8rem;
+}
+
+.carDetails #table2 h2{
+    font-size: 2rem;
+    color: #FF4C4C;
+    background: none;
+    text-align: left;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.carDetails #table2 h3{
+    color: #FF4C4C;
+}
+
+.carDetails #interior2{
+    width: 350px;
+    float: right;
+    margin-top: -500px;
+}
+
+/*End of car details page Formatting*/
+
+@media(max-width: 1230px){
+    
+    .part1{
+        margin-left: 10%;
+    }
+
+    .carDetails h1{
+        margin-left: 3rem;
+    }
+
+    .carDetails hr{
+        left: 6rem;
+    }
+    
+    .carDetails p{
+        margin-left: 6.5rem;
+    }
+    
+    .carDetails #axia{
+        margin-left: 2rem;
+    }
+
+    .carDetails #table1{
+        left: 42rem;
+    }
+    
+    .carDetails #table2{
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+    .carDetails #interior2{
+        display: none;
+    }
+}
+
+@media(max-width: 1100px){
+    .part1{
+        margin-left: 8%;
+    }
+    .carDetails{
+        padding-top: 6rem;
+    }
+
+    .carDetails h1{
+        font-size: 3rem;
+    }
+    
+    .carDetails hr{
+        width: 15rem;
+        height: 8px;
+        left: 5.5rem;
+    }
+
+    .carDetails #axia{
+        width: 350px;
+    }
+
+    .carDetails p{
+        font-size: 1.2rem;
+        left: -1.5rem;
+    }
+
+    .carDetails #heart{
+        font-size: 1.2rem;
+        padding-left: 4.5rem;
+        -webkit-text-stroke: 1.5px #FF4C4C;
+    }
+
+    .carDetails #table1{
+        margin: -3rem;
+        left: 60%;
+    }
+
+    .carDetails #table1 td, .carDetails #table1 th{
+        font-size: 1.2rem;
+        padding-top: 0.8rem;
+    }
+
+    .carDetails #book{
+        width: 150px;
+        font-size: 1.3rem;
+    }
+    
+    .carDetails h2{
+        padding: 18px 0 18px;
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .carDetails #table2{
+        padding-left: 20px;
+    }
+    .carDetails #table2 h2{
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+    }
+    
+    .carDetails #table2 h3{
+        font-size: 1.2rem;
+    }
+
+    .carDetails #table2 td{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 880px){
+    .carDetails h1{
+        position: initial; 
+        margin: auto;
+        text-align: center;
+    }
+
+    .carDetails hr{
+        margin: auto;
+        left: 0.5rem;
+        text-align: center;
+    }
+
+    .carDetails #axia{ 
+        position: relative;
+        width: 300px;
+        left: 13rem;
+    }
+
+    .carDetails p{
+        position: initial; 
+        margin: auto; 
+        text-align: center;
+    }
+
+    .carDetails #table1{
+        position: initial;
+        margin: auto;
+        align-items: center;
+    }
+
+    .carDetails #detail{
+        display: none;
+    }
+
+    .carDetails #book{
+        position: absolute;
+        left: 400px;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 8px 30px 8px 30px;
+    }
+
+    .carDetails h2{
+        margin-top: 4rem;
+    }
+
+    .carDetails #table2 td{
+        padding: 2px;
+    }
+}
+
+@media(max-width: 800px){
+    .carDetails #book{
+        left: 300px;
+    }
+}
+
+@media(max-width: 700px){
+    .carDetails #axia{ 
+        margin-left: -80px;
+    }
+
+    .carDetails #book{
+        left: 200px;
+    }
+}
+
+@media(max-width: 550px){
+    .carDetails #axia{ 
+        margin-left: -120px;
+    }
+    .carDetails #book{
+        left: 200px;
+    }
+}

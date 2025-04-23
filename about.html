@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "keywords" content = "Car, Automobile, Proton, Perodua">
+        <meta name = "description" content = "Experience the future of car shopping today with Swift, the trailblazing integrated car e-commerce platform that brings tomorrow's vehicles right to your fingertips!">
+        <title>About SWIFT</title>
+        
+        <!--Link To Java Script & jQuery-->
+        <script src = "main.js"></script>
+
+        <!--Link to CSS file and Font Icon-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "about.css">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header> 
+            <!--Display the logo of our website-->
+            <a href = "index.html" class = "logo"><img src = "img/logo.png" alt = "SWIFT"></a>
+            
+            <!--Display the menu icon when screen is smaller-->
+            <div class = "fa fa-bars" id = "menu-icon"></div>
+
+            <!--Navigation bar of Swift Website-->
+            <ul class = "navbar">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "signup.html">Sign Up</a>
+                    <ul class = "submenu">
+                        <li><a href = "signup.html">Sign Up</a></li>
+                        <li><a href = "login.html">Login</a></li>
+                    </ul>
+                </li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "cars.html">Our Cars</a>
+                    <ul class = "submenu">
+                        <li><a href = "/cars.html#proton">Proton</a></li>
+                        <li><a href = "/cars.html#perodua">Perodua</a></li>
+                        <li><a href = "/cars.html#honda">Honda</a></li>
+                        <li><a href = "/cars.html#toyota">Toyota</a></li>
+                        <li><a href = "/cars.html#nissan">Nissan</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--Display language translator and contact icon-->
+            <div class = "navbar-btn">
+                <a href = "#" class = "fa fa-globe"></a>
+                <a href = "#footer" class = "fa fa-phone"></a>
+                <!--Search Icon-->
+                <i id = "search-icon" class = "fa fa-search"></i>
+                <!--Search Box-->
+                <div class = "search-box container">
+                    <input type = "search" placeholder = "Search for cars by brand & model">
+                </div>
+            </div>
+        </header>
+
+        <section class = "about tmln--box">
+            <h1>ABOUT US</h1>
+            <hr id = "line">
+            <hr id = "part1">
+            <i id = "icon1" class="fa fa-taxi"></i>
+            <i id = "icon2" class="fa fa-handshake-o"></i>
+            <i id = "icon3" class="fa fa-line-chart"></i>
+            <ul class = "tmln__list">
+                <li class = "tmln__item tmln__item--active">
+                    <div id = "content1">
+                        <h3 class = "headline">Small Startup Company</h3>
+                        <p>Swift started off as a small startup company created by four friends in order to
+                            make renting cars for students at HELP University more convenient. The company
+                            started expanding to other universities in Malaysia as the website improved.</p>
+                    </div>
+                    <div id = "part2"></div>
+                </li>
+                <li class = "tmln__item tmln__item--bg-lght">
+                    <div id = "content2">
+                        <h3 class = "headline">Leap of Faith</h3>
+                        <p> Recently, Swift has taken a leap of faith to venture into the business globally 
+                            throughout the whole country. Hence, they needed to render the website to 
+                            fulfill the needs of every customer throughout the country.</p>
+                    </div>
+                </li>
+                <li class = "tmln__item tmln__item--bg-dark">
+                    <div id = "content3">
+                        <h3 class = "headline">Increasing Demand</h3>
+                        <p>Due to increasing demand from customers,
+                            Swift now offers used car sales to their 
+                            customers in addition to automobile rentals.</p>
+                    </div>
+                </li>
+            </ul>
+            <div id = "part3"></div>
+            <hr id = "part4">
+            <div id = "part5"><i class="fa fa-play"></i></div>
+
+            <!--Vision & Mission-->
+            <div class = "vm-container">
+                <div class = "vm-flex-item">
+                    <div class = "vm-info">
+                        <h2 class = "vmtitle">VISION</h2><hr id = "vision">
+                        <p>Empowering university students with accessible and 
+                           dependable transportation options, enabling them to 
+                           focus on their education and create lasting memories.
+                        </p>
+            
+                        <div class = "vm-imgcontainer" onmouseenter="imganimate('sale');" onmouseleave="imgdeanimate('sale');">
+                            <div class = "vm-img">
+                                <img id = "sale" src = "./img/carforsale.png" alt = "Car for Sale Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class = "vm-flex-item">
+                    <div class = "vm-info">
+                        <div class = "vm-imgcontainer" onmouseenter="imganimate('united');" onmouseleave="imgdeanimate('united');">
+                            <div class = "vm-img">
+                                <img id = "united" src = "./img/unitedhands.png" alt = "United Image">
+                            </div>
+                        </div>
+            
+                        <h2 class = "vmtitle">MISSION</h2><hr id = "mission">
+                        <p>To provide affordable and reliable used cars for 
+                           university students, ensuring convenient and safe 
+                           transportation throughout their academic journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class = "vm">
+            <h2>VISION</h2>
+            <p>Empowering university students with accessible and 
+            dependable transportation options, enabling them to 
+            focus on their education and create lasting memories.</p>
+            <h2>MISSION</h2>
+            <p>To provide affordable and reliable used cars for 
+                university students, ensuring convenient and safe 
+                transportation throughout their academic journey.</p>
+        </div>
+
+        <br><br>
+        <!--Footer and Contact section for Swift company-->
+        <footer id = "footer">
+            <h2>GET IN TOUCH</h2><br>
+            <h3>Mailing Address</h3>
+            <p> No.223, Lorong Pegawai, Taman Pegawai, 32000 Sitiawan Perak</p>
+
+            <h3 id = "contact">Phone Number</h3>
+            <p> 011 - 12345678</p>
+
+            <h3>Socials</h3>
+            <div id = "socials">
+                <a href = "#"><i class="fa fa-facebook"></i></a>
+                <a href = "#"><i class="fa fa-envelope-o"></i></a>
+                <a href = "#"><i class="fa fa-instagram"></i></a>   
+            </div><br>
+            <div id = "copyright">Copyright &copy; 2023 Swift Car Corporation 
+                (Last Modified: <script>document.write(document.lastModified)</script>)</div><br>
+        </footer>
+
+        <script>
+            function imganimate(targetimg) {
+                var element = document.getElementById(targetimg);
+                element.classList.add("imganimate");
+            }
+
+            function imgdeanimate(targetimg) {
+                var element = document.getElementById(targetimg);
+                element.classList.remove("imganimate");
+            }
+        </script>
+    </body>
+</html>

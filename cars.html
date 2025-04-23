@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "keywords" content = "Car, Automobile, Proton, Perodua">
+        <meta name = "description" content = "Experience the future of car shopping today with Swift, the trailblazing integrated car e-commerce platform that brings tomorrow's vehicles right to your fingertips!">
+        <title>SWIFT Cars</title>
+
+        <!--Link To Java Script & jQuery-->
+        <script src = "main.js"></script>
+
+        <!--Link to CSS file and Font Icon-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "cars.css">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header> 
+            <!--Display the logo of our website-->
+            <a href = "index.html" class = "logo"><img src = "img/logo.png" alt = "SWIFT"></a>
+            
+            <!--Display the menu icon when screen is smaller-->
+            <div class = "fa fa-bars" id = "menu-icon"></div>
+
+            <!--Navigation bar of Swift Website-->
+            <ul class = "navbar">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "signup.html">Sign Up</a>
+                    <ul class = "submenu">
+                        <li><a href = "signup.html">Sign Up</a></li>
+                        <li><a href = "login.html">Login</a></li>
+                    </ul>
+                </li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "cars.html">Our Cars</a>
+                    <ul class = "submenu">
+                        <li><a href = "/cars.html#proton">Proton</a></li>
+                        <li><a href = "/cars.html#perodua">Perodua</a></li>
+                        <li><a href = "/cars.html#honda">Honda</a></li>
+                        <li><a href = "/cars.html#toyota">Toyota</a></li>
+                        <li><a href = "/cars.html#nissan">Nissan</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--Display language translator and contact icon-->
+            <div class = "navbar-btn">
+                <a href = "#" class = "fa fa-globe"></a>
+                <a href = "#footer" class = "fa fa-phone"></a>
+                <!--Search Icon-->
+                <i id = "search-icon" class = "fa fa-search"></i>
+                <!--Search Box-->
+                <div class = "search-box container">
+                    <input type = "search" placeholder = "Search for cars by brand & model">
+                </div>
+            </div>
+        </header>
+        <a href = "#" class = "fa fa-angle-double-up" id = "top-icon"></a>
+        <div class = "carheader">
+            <h1>OUR CARS</h1>
+            <hr>
+            <div class = "filter-box">
+                <i class="fa fa-filter" id = "filter-icon"></i>
+                <select id = "filter">
+                    <option value = "budget">Budget</option>
+                    <option value = "brand">Brand & Model</option>
+                    <option value = "body">Body Type</option>
+                    <option value = "year">Year</option>
+                    <option value = "mileage">Mileage</option>
+                </select>
+            </div>
+        </div>
+
+        <div class = "interior">
+            <div class = "mySlides fade">
+                <div class = "numbertext">1 / 6</div>
+                <img src = "int/int1.jpg" alt = "Anti-Snatch Hook">
+            </div>
+            <div class = "mySlides fade">
+                <div class = "numbertext">2 / 6</div>
+                <img src = "int/int5.jpg" alt = "Shopping Hooks">
+            </div>
+            <div class = "mySlides fade">
+                <div class = "numbertext">3 / 6</div>
+                <img src = "int/int2.jpg" alt = "Semi-Bucket Seat with Semi-Leather and Stitching">
+            </div>
+            <div class = "mySlides fade">
+                <div class = "numbertext">4 / 6</div>
+                <img src = "int/int3.jpg" alt = "Longer Leg Room">
+            </div>
+            <div class = "mySlides fade">
+                <div class = "numbertext">5 / 6</div>
+                <img src = "int/int4.jpg" alt = "Side View Axia Interior">
+            </div>
+            <div class = "mySlides fade">
+                <div class = "numbertext">6 / 6</div>
+                <img src = "int/int6.jpg" alt = "Axia Interior Image">
+            </div>
+
+            <i class = "fa fa-times" id = "close-form"></i>
+            <a class = "prev" onclick = "plusSlide(-1)">❮</a>
+            <a class = "next" onclick = "plusSlide(1, 0)">❯</a>
+        </div>
+
+        <script>
+            let index = 1;
+            showSlide(index);
+            
+            function plusSlide(n) {
+              showSlide(index += n);
+            }
+            
+            function showSlide(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              if (n > slides.length) {index = 1}    
+              if (n < 1) {index = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slides[index-1].style.display = "block";  
+            }
+        </script>
+
+<!--***********************************************************************************************************************************************************-->
+        <div class = "carlogo"><img id = "proton" src = "img/logoproton.png" alt = "Logo"><h2>PROTON</h2></div>
+
+        <div class = "mySlides1 fade">
+            <div class = "slide">
+                <!--car 1-->
+                <div class = "box">
+                    <img src = "car/v_persona.png" alt = "PERSONA">
+                    <h3>2021 Proton PERSONA Executive 1.6</h3>
+                    <span>RM 48,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 2-->
+                <div class = "box">
+                    <img src = "car/v_iriz.png" alt = "IRIZ">
+                    <h3>2020 Proton IRIZ Premium 1.6</h3>
+                    <span>RM 48,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 3-->
+                <div class = "box">
+                    <img src = "car/v_saga.png" alt = "SAGA">
+                    <h3>2014 Proton SAGA SV 1.3</h3>
+                    <span>RM 18,000.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides1 fade">
+            <div class = "slide">
+                <!--car 4-->
+                <div class = "box">
+                    <img src = "car/v_x50.png" alt = "X50">
+                    <h3>2022 Proton X50 TGDI Flagship 1.5</h3>
+                    <span>RM 99,700.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 5-->
+                <div class = "box">
+                    <img src = "car/v_x70.png" alt = "X70">
+                    <h3>2019 Proton X70 TGDI Premium 1.8</h3>
+                    <span>RM 79,800.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 6-->
+                <div class = "box">
+                    <img src = "car/v_exora.png" alt = "EXORA">
+                    <h3>2016 Proton EXORA Premium 1.6</h3>
+                    <span>RM 39,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Next & Previous Buttons-->
+        <a class = "prev1" onclick = "plusSlides(-1, 0)">❮</a>
+        <a class = "next1" onclick = "plusSlides(1, 0)">❯</a>
+    
+        <!-- The dots/circles -->
+        <div class = "dott">
+            <span class = "dot" onclick="currentSlide(1, 0)"></span>
+            <span class = "dot" onclick="currentSlide(2, 0)"></span>
+        </div>
+
+<!--***********************************************************************************************************************************************************-->
+        <div class = "carlogo"><img id = "perodua" src = "img/logoperodua.png" alt = "Logo"><h2>PERODUA</h2></div>
+
+        <div class = "mySlides2 fade">
+            <div class = "slide">
+                <!--car 1-->
+                <div class = "box">
+                    <img src = "car/p_alza.png" alt = "ALZA">
+                    <h3>2015 Perodua ALZA EZ 1.5</h3>
+                    <span>RM 38,600.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 2-->
+                <div class = "box">
+                    <img id = "axia" src = "car/p_axia.png" alt = "AXIA">
+                    <h3>2022 Perodua AXIA SE 1.0</h3>
+                    <span>RM 44,900.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "details.html" class = "details">View Details</a>
+                </div>
+
+                <!--car 3-->
+                <div class = "box">
+                    <img src = "car/p_ativa.png" alt = "ATIVA">
+                    <h3>2021 Perodua ATIVA AV 1.0</h3>
+                    <span>RM 70,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides2 fade">
+            <div class = "slide">
+                <!--car 4-->
+                <div class = "box">
+                    <img src = "car/p_aruz.png" alt = "ARUZ">
+                    <h3>2019 Perodua ARUZ AV 1.5</h3>
+                    <span>RM 62,800.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 5-->
+                <div class = "box">
+                    <img src = "car/p_bezza.png" alt = "BEZZA">
+                    <h3>2022 Perodua Bezza G 1.0</h3>
+                    <span>RM 36,000.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 6-->
+                <div class = "box">
+                    <img src = "car/p_myvi.png" alt = "MYVI">
+                    <h3>2017 Perodua MYVI Advance 1.5</h3>
+                    <span>RM 44,500.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Next & Previous Buttons-->
+        <a class = "prev2" onclick = "plusSlides(-1, 1)">❮</a>
+        <a class = "next2" onclick = "plusSlides(1, 1)">❯</a>
+        
+        <!-- The dots/circles -->
+        <div class = "dott">
+            <span class = "dot" onclick="currentSlide(1, 1)"></span>
+            <span class = "dot" onclick="currentSlide(2, 1)"></span>
+        </div>
+
+<!--***********************************************************************************************************************************************************-->
+        <div class = "carlogo"><img id = "honda" src = "img/logohonda.png" alt = "Logo"><h2>HONDA</h2></div>
+
+        <div class = "mySlides3 fade">
+            <div class = "slide">
+                <!--car 1-->
+                <div class = "box">
+                    <img src = "car/h_accord.jpg" alt = "ACCORD">
+                    <h3>2021 Honda ACCORD TC VTEC 1.5</h3>
+                    <span>RM 154,900.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 2-->
+                <div class = "box">
+                    <img src = "car/h_jazz.jpg" alt = "JAZZ">
+                    <h3>2018 Honda JAZZ S i-VTEC 1.5</h3>
+                    <span>RM 58,900.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 3-->
+                <div class = "box">
+                    <img src = "car/h_civic.jpg" alt = "CIVIC">
+                    <h3>2022 Honda CIVIC E VTEC 1.5</h3>
+                    <span>RM 122,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides3 fade">
+            <div class = "slide">
+                <!--car 4-->
+                <div class = "box">
+                    <img src = "car/h_hrv.png" alt = "HR-V">
+                    <h3>2020 Honda HR-V i-VTEC RS 1.8</h3>
+                    <span>RM 107,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 5-->
+                <div class = "box">
+                    <img src = "car/h_crv.png" alt = "CR-V">
+                    <h3>2017 Honda CR-V TC-P VTEC 1.5</h3>
+                    <span>RM 114,700.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 6-->
+                <div class = "box">
+                    <img src = "car/h_city.png" alt = "CITY">
+                    <h3>2021 Honda CITY V i-VTEC 1.5</h3>
+                    <span>RM 79,800.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Next & Previous Buttons-->
+        <a class = "prev3" onclick = "plusSlides(-1, 2)">❮</a>
+        <a class = "next3" onclick = "plusSlides(1, 2)">❯</a>
+        
+        <!-- The dots/circles -->
+        <div class = "dott">
+            <span class = "dot" onclick="currentSlide(1, 2)"></span>
+            <span class = "dot" onclick="currentSlide(2, 2)"></span>
+        </div>
+
+    <!--***********************************************************************************************************************************************************-->
+        <div class = "carlogo"><img id = "toyota" src = "img/logotoyota.png" alt = "Logo"><h2>TOYOTA</h2></div>
+
+        
+        <div class = "mySlides4 fade">
+            <div class = "slide">
+                <!--car 1-->
+                <div class = "box">
+                    <img src = "car/t_corolla.jpg" alt = "COROLLA">
+                    <h3>2020 Toyota COROLLA Altis G 1.8</h3>
+                    <span>RM 118,400.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 2-->
+                <div class = "box">
+                    <img src = "car/t_hilux.png" alt = "HILUX">
+                    <h3>2021 Toyota HILUX E 2.4</h3>
+                    <span>RM 104,800.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 3-->
+                <div class = "box">
+                    <img src = "car/t_rush.png" alt = "RUSH">
+                    <h3>2018 Toyota RUSH S 1.5</h3>
+                    <span>RM 90,700.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "mySlides4 fade">
+            <div class = "slide">
+                <!--car 4-->
+                <div class = "box">
+                    <img src = "car/t_veloz.jpg" alt = "VELOZ">
+                    <h3>2022 Toyota VELOZ 1.5 MPV</h3>
+                    <span>RM 95,000.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 5-->
+                <div class = "box">
+                    <img src = "car/t_vios.png" alt = "VIOS">
+                    <h3>2021 Toyota VIOS G 1.5</h3>
+                    <span>RM 82,500.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+
+                <!--car 6-->
+                <div class = "box">
+                    <img src = "car/t_yaris.png" alt = "YARIS">
+                    <h3>2020 Toyota YARIS S TRD 1.5</h3>
+                    <span>RM 83,300.00</span>
+                    <div class = "heart">
+                        <input type = "checkbox">
+                        <button><i>LIKE</i></button>
+                    </div>
+                    <a href = "#" class = "details">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Next & Previous Buttons-->
+        <a class = "prev4" onclick = "plusSlides(-1, 3)">❮</a>
+        <a class = "next4" onclick = "plusSlides(1, 3)">❯</a>
+    
+        <!-- The dots/circles -->
+        <div class = "dott">
+            <span class = "dot" onclick="currentSlide(1, 3)"></span>
+            <span class = "dot" onclick="currentSlide(2, 3)"></span>
+        </div>
+
+<!--***********************************************************************************************************************************************************-->
+    <div class = "carlogo"><img id = "nissan" src = "img/logonissan.png" alt = "Logo"><h2>NISSAN</h2></div>
+
+    <div class = "mySlides5 fade">
+        <div class = "slide">
+            <!--car 1-->
+            <div class = "box">
+                <img src = "car/n_trail.jpg" alt = "X-TRAIL">
+                <h3>2015 Nissan X-Trail 2.0</h3>
+                <span>RM 61,000.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+
+            <!--car 2-->
+            <div class = "box">
+                <img src = "car/n_navara.jpg" alt = "NAVARA">
+                <h3>2021 Nissan NAVARA PRO-4X 2.5</h3>
+                <span>RM 127,000.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+
+            <!--car 3-->
+            <div class = "box">
+                <img src = "car/n_serena.jpg" alt = "SERENA">
+                <h3>2021 Nissan SERENA S-Hybrid 2.0</h3>
+                <span>RM 125,800.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "mySlides5 fade">
+        <div class = "slide">
+            <!--car 4-->
+            <div class = "box">
+                <img src = "car/n_almera.png" alt = "ALMERA">
+                <h3>2016 Nissan ALMERA E 1.5</h3>
+                <span>RM 37,800.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+
+            <!--car 5-->
+            <div class = "box">
+                <img src = "car/n_nv200.jpg" alt = "NV200">
+                <h3>2016 Nissan NV200 Vanette M 1.6</h3>
+                <span>RM 41,800.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+
+            <!--car 6-->
+            <div class = "box">
+                <img src = "car/n_leaf.jpg" alt = "LEAF">
+                <h3>2020 Nissan LEAF EV 1.0</h3>
+                <span>RM 175,000.00</span>
+                <div class = "heart">
+                    <input type = "checkbox">
+                    <button><i>LIKE</i></button>
+                </div>
+                <a href = "#" class = "details">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Next & Previous Buttons-->
+    <a class = "prev5" onclick = "plusSlides(-1, 4)">❮</a>
+    <a class = "next5" onclick = "plusSlides(1, 4)">❯</a>
+    
+        <!-- The dots/circles -->
+    <div class = "dott">
+        <span class = "dot" onclick="currentSlide(1, 4)"></span>
+        <span class = "dot" onclick="currentSlide(2, 4)"></span>
+    </div>
+
+    <br><br>
+    <!--Footer and Contact section for Swift company-->
+    <footer id = "footer">
+        <h2>GET IN TOUCH</h2><br>
+        <h3>Mailing Address</h3>
+        <p> No.223, Lorong Pegawai, Taman Pegawai, 32000 Sitiawan Perak</p>
+
+        <h3 id = "contact">Phone Number</h3>
+        <p> 011 - 12345678</p>
+
+        <h3>Socials</h3>
+        <div id = "socials">
+            <a href = "#"><i class="fa fa-facebook"></i></a>
+            <a href = "#"><i class="fa fa-envelope-o"></i></a>
+            <a href = "#"><i class="fa fa-instagram"></i></a>   
+        </div><br>
+        <div id = "copyright">Copyright &copy; 2023 Swift Car Corporation
+                (Last Modified: <script>document.write(document.lastModified)</script>)</div><br>
+    </footer>
+
+    <script>
+        var slideIndex = [1, 1, 1, 1, 1];
+        var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"];
+        showSlides(1, 0); /*first slide of slideshow 1*/
+        showSlides(1, 1); /*first slide of slideshow 2*/
+        showSlides(1, 2); /*first slide of slideshow 3*/
+        showSlides(1, 3); /*first slide of slideshow 4*/
+        showSlides(1, 4); /*first slide of slideshow 5*/
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load",function() {
+            showSlides(slideIndex[slideNo], slideNo);
+            myTimer = setInterval(function(){plusSlides(1, slideNo)}, 8000);
+        
+            //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+        
+            slideshowContainer.addEventListener('mouseenter', pause);
+            slideshowContainer.addEventListener('mouseleave', resume);
+        })
+
+        // NEXT AND PREVIOUS CONTROL
+        function plusSlides(n, slideNo){
+            clearInterval(myTimer);
+            if (n < 0){
+                showSlides((slideIndex[slideNo] -= 1), slideNo);
+            } else {
+                showSlides((slideIndex[slideNo] += 1), slideNo); 
+            }
+            
+            //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            
+            if (n === -1){
+                myTimer = setInterval(function(){
+                    plusSlides((n + 2), slideNo)}, 8000);
+            } else {
+                myTimer = setInterval(function(){
+                    plusSlides((n + 1), slideNo)}, 8000);
+            }
+        }
+
+        //Controls the current slide and resets interval if needed
+        function currentSlide(n, slideNo){
+            clearInterval(myTimer);
+            myTimer = setInterval(function(){plusSlides((n + 1), slideNo)}, 8000);
+            showSlides((slideIndex[slideNo] = n), slideNo);
+        }
+
+        function showSlides(n, slideNo){
+            var i;
+            var slides = document.getElementsByClassName(slideId[slideNo]);
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex[slideNo] = 1;
+            }
+            if (n < 1) {
+                slideIndex[slideNo] = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex[slideNo]-1].style.display = "block";
+            dots[slideIndex[slideNo]-1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () =>{
+            clearInterval(myTimer);
+            myTimer = setInterval(function(){plusSlides(slideIndex[slideNo])}, 8000);
+        }
+    </script>
+</body>
+</html>
