@@ -39,6 +39,11 @@ You can view the platform at: [Swift Used Car Selling Platform](https://wanxin28
 
 ## Setup ⚙️
 1. Clone the repository:  
-   `git clone https://github.com/wanxin2883/swift-used-car-selling-platform.git`
+   `git clone https://github.com/Wanxin2883/swift-used-car-selling-platform.git`
 2. Open `index.html` in your browser to view the site.
 
+## Authors
+1. Cheah Wan Xin
+2. Anusyalinie Jayaraman
+3. Ermmyna Roselee
+4. Tan Jim Hern
